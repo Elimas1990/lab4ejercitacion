@@ -1,20 +1,27 @@
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" ></span>
+<div class="container">
+  <h1 class="text-center mb-3">{{title}}</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-3">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" >1ra edad</span>
+        </div>
+        <input type="number" class="form-control"  placeholder="1ra edad" [(ngModel)]="primeraEdad">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" >2da edad</span>
+        </div>
+        <input type="number" class="form-control" placeholder="2da edad" [(ngModel)]="segundaEdad">
+      </div>
+      <div class="btn-group mb-3 w-100">
+        <button class="btn btn-success" (click)="Calcular()">Calcular</button>
+        <button class="btn btn-danger" (click)="Limpiar()">Limpiar</button>
+      </div>
+      <div class="alert alert-success text-center">{{suma}}</div>
+      <div class="alert alert-info text-center">{{promedio}}</div>
+    </div>
   </div>
-  <input type="number" class="form-control"  placeholder="1ra edad" [(ngModel)]="primeraEdad">
+  
 </div>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" ></span>
-  </div>
-  <input type="number" class="form-control" placeholder="2da edad" [(ngModel)]="segundaEdad">
-</div>
-<div class="btn-group">
-  <button class="btn btn-success" (click)="Calcular()">Calcular</button>
-  <button class="btn btn-danger" (click)="Limpiar()">Limpiar</button>
-</div>
-Suma={{suma}}
-<br>
-Promedio={{promedio}}
 <router-outlet></router-outlet>

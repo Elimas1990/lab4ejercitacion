@@ -7,13 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-new-proyect';
-  primeraEdad;
-  segundaEdad;
-  promedio;
-  suma;
+  primeraEdad:number;
+  segundaEdad:number;
+  promedio:string;
+  suma:string;
   Calcular(){
-    this.suma=this.primeraEdad+this.segundaEdad
-    this.promedio=this.suma/2
+    let sumatoria
+    sumatoria=this.primeraEdad+this.segundaEdad
+    this.suma='Suma = '+sumatoria
+    this.promedio='Promedio = '+sumatoria/2
     
   }
   Limpiar(){
